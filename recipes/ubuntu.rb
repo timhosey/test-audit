@@ -85,7 +85,7 @@ sysctl 'net.ipv4.conf.default.log_martians' do
   value 1
 end
 
-sysctl 'net.ipv6.conf.all.disable_ipv6=' do
+sysctl 'net.ipv6.conf.all.disable_ipv6' do
   value 1
 end
 
