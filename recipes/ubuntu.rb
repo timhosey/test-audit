@@ -57,7 +57,7 @@ sysctl 'net.ipv4.conf.default.accept_redirects' do
   value 0
 end
 
-sysctl 'sysctl -w net.ipv4.conf.all.accept_redirects' do
+sysctl 'net.ipv4.conf.all.accept_redirects' do
   value 0
 end
 
