@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.1
+
+- Changed all the `execute` resources calling sysctl into `sysctl` resources for Ubuntu
+
 ## 0.3.0
 
 - Added `chef-client` cookbook dependency so we can have auto runs.

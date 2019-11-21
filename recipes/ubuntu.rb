@@ -24,36 +24,122 @@ execute 'sed -i \'/^max_log_file_action/ c\\max_log_file_action = keep_logs\' /e
 # 20-28, 30, 31b
 
 # sysctl05-10
-execute 'sysctl -w net.ipv4.icmp_ratelimit=100'
-execute 'sysctl -w net.ipv4.icmp_ratemask=88089'
-execute 'sysctl -w net.ipv4.tcp_timestamps=0'
-execute 'sysctl -w net.ipv4.conf.all.arp_ignore=1'
-execute 'sysctl -w net.ipv4.conf.all.arp_announce=2'
-execute 'sysctl -w net.ipv4.tcp_rfc1337=1'
+sysctl 'net.ipv4.icmp_ratelimit' do
+  value 100
+end
+
+sysctl 'net.ipv4.icmp_ratemask' do
+  value 88089
+end
+
+sysctl 'net.ipv4.tcp_timestamps' do
+  value 0
+end
+
+sysctl 'net.ipv4.conf.all.arp_ignore' do
+  value 1
+end
+
+sysctl 'net.ipv4.conf.all.arp_announce' do
+  value 2
+end
+
+sysctl 'net.ipv4.tcp_rfc1337' do
+  value 1
+end
+
 # sysctl-13-18
-execute 'sysctl -w net.ipv4.conf.default.accept_source_route=0'
-execute 'sysctl -w net.ipv4.conf.default.accept_redirects=0'
-execute 'sysctl -w net.ipv4.conf.all.accept_redirects=0'
-execute 'sysctl -w net.ipv4.conf.all.secure_redirects=0'
-execute 'sysctl -w net.ipv4.conf.default.secure_redirects=0'
-execute 'sysctl -w net.ipv4.conf.default.send_redirects=0'
-execute 'sysctl -w net.ipv4.conf.all.send_redirects=0'
-execute 'sysctl -w net.ipv4.conf.all.log_martians=1'
-execute 'sysctl -w net.ipv4.conf.default.log_martians=1'
-execute 'sysctl -w net.ipv6.conf.all.disable_ipv6=1'
+sysctl 'net.ipv4.conf.default.accept_source_route' do
+  value 0
+end
+
+sysctl 'net.ipv4.conf.default.accept_redirects' do
+  value 0
+end
+
+sysctl 'sysctl -w net.ipv4.conf.all.accept_redirects' do
+  value 0
+end
+
+sysctl 'net.ipv4.conf.all.secure_redirects' do
+  value 0
+end
+
+sysctl 'net.ipv4.conf.default.secure_redirects' do
+  value 0
+end
+
+sysctl 'net.ipv4.conf.default.send_redirects' do
+  value 0
+end
+
+sysctl 'net.ipv4.conf.all.send_redirects' do
+  value 0
+end
+
+sysctl 'net.ipv4.conf.all.log_martians' do
+  value 1
+end
+
+sysctl 'net.ipv4.conf.default.log_martians' do
+  value 1
+end
+
+sysctl 'net.ipv6.conf.all.disable_ipv6=' do
+  value 1
+end
+
 # sysctl20-28
-execute 'sysctl -w net.ipv6.conf.default.accept_redirects=0'
-execute 'sysctl -w net.ipv6.conf.all.accept_redirects=0'
-execute 'sysctl -w net.ipv6.conf.default.router_solicitations=0'
-execute 'sysctl -w net.ipv6.conf.default.accept_ra_rtr_pref=0'
-execute 'sysctl -w net.ipv6.conf.default.accept_ra_pinfo=0'
-execute 'sysctl -w net.ipv6.conf.default.accept_ra_defrtr=0'
-execute 'sysctl -w net.ipv6.conf.all.accept_ra=0'
-execute 'sysctl -w net.ipv6.conf.default.accept_ra=0'
-execute 'sysctl -w net.ipv6.conf.default.autoconf=0'
-execute 'sysctl -w net.ipv6.conf.default.dad_transmits=0'
-execute 'sysctl -w net.ipv6.conf.default.max_addresses=1'
+sysctl 'net.ipv6.conf.default.accept_redirects' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.all.accept_redirects' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.router_solicitations' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.accept_ra_rtr_pref' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.accept_ra_pinfo' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.accept_ra_defrtr' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.all.accept_ra' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.accept_ra' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.autoconf' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.dad_transmits' do
+  value 0
+end
+
+sysctl 'net.ipv6.conf.default.max_addresses' do
+  value 1
+end
+
 # sysctl30
-execute 'sysctl -w kernel.sysrq=0'
+sysctl 'kernel.sysrq' do
+  value 0
+end
+
 #sysctl31b
-execute 'sysctl -w kernel.core_pattern=/^\\/.*/'
+sysctl 'kernel.core_pattern' do
+  value '/^\\/.*/'
+end
