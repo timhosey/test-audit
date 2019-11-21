@@ -139,7 +139,7 @@ sysctl 'kernel.sysrq' do
   value 0
 end
 
-#sysctl31b
+# sysctl31b
 sysctl 'kernel.core_pattern' do
   value '/^\\/.*/'
 end
