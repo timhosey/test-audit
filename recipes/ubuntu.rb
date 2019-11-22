@@ -6,8 +6,13 @@ execute 'sed -i \'/^PASS_MIN_DAYS/ c\\PASS_MIN_DAYS\\t7\' /etc/login.defs'
 execute 'sed -i \'/^UMASK/ c\\UMASK\\t027\' /etc/login.defs'
 
 # Install havaged package to increase entropy (os-08)
-package 'haveged'
-execute 'update-rc.d haveged defaults'
+package 'haveged' do
+  notifies :run, 'package[update-rc.d haveged defaults]', :immediate
+end
+
+execute 'update-rc.d haveged defaults' do
+  action :nothing
+end
 
 # Add lines to /etc/modprobe.d/dev-sec.conf if they don't exist (os-10)
 remediate 'Remediating os-10' do
