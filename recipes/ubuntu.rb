@@ -7,7 +7,7 @@ execute 'sed -i \'/^UMASK/ c\\UMASK\\t027\' /etc/login.defs'
 
 # Install havaged package to increase entropy (os-08)
 package 'haveged' do
-  notifies :run, 'package[update-rc.d haveged defaults]', :immediate
+  notifies :run, 'execute[update-rc.d haveged defaults]', :immediate
 end
 
 execute 'update-rc.d haveged defaults' do
