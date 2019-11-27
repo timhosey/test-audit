@@ -9,10 +9,6 @@ when 'windows'
   default['audit']['profiles'] = [ {
     'compliance': 'admin/thosey-windows-baseline',
     'version': '0.1.2',
-  },
-  {
-    'compliance': 'admin/cis-windows2016rtm-release1607-level1-memberserver',
-    'version': '1.1.0-9',
   } ]
 when 'ubuntu'
   default['audit']['profiles'] = [ {
