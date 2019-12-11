@@ -1,31 +1,39 @@
 ---
 driver:
   name: vagrant
-
-## The forwarded_port port feature lets you connect to ports on the VM guest via
-## localhost on the host.
-## see also: https://www.vagrantup.com/docs/networking/forwarded_ports.html
-
-#  network:
-#    - ["forwarded_port", {guest: 80, host: 8080}]
+  boot_timeout: 2400
+  gui: false
 
 provisioner:
   name: chef_zero
-
-  ## product_name and product_version specifies a specific Chef product and version to install.
-  ## see the Chef documentation for more details: https://docs.chef.io/config_yml_kitchen.html
-  #  product_name: chef
-  #  product_version: 15
+  product_name: chef
+  always_update_cookbooks: true
+  product_version: 15
+  client_rb:
+    chef_license: accept-no-persist
 
 verifier:
   name: inspec
 
 platforms:
+  - name: rhel7
+    driver:
+      box: generic/rhel7
+  - name: windows-2012r2
+    driver:
+      box: tas50/windows_2012r2
+  - name: windows-2016
+    driver:
+       box: tas50/windows_2016
   - name: ubuntu-18.04
+  - name: centos-7
 
 suites:
   - name: default
     verifier:
       inspec_tests:
-        - test/integration/default
+        - name: thosey-windows-baseline
+          url: https://tim.haus/chef/admin-thosey-windows-baseline-0.1.2.tar.gz
+        - name: linux-baseline
+          url: https://tim.haus/chef/admin-linux-baseline-2.2.2.tar.gz
     attributes:
