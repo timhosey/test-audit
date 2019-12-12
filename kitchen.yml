@@ -16,9 +16,6 @@ verifier:
   name: inspec
 
 platforms:
-  - name: rhel7
-    driver:
-      box: generic/rhel7
   - name: windows-2012r2
     driver:
       box: tas50/windows_2012r2
@@ -26,12 +23,12 @@ platforms:
     driver:
        box: tas50/windows_2016
   - name: ubuntu-18.04
-  - name: centos-7
 
 suites:
   - name: default
     verifier:
       inspec_tests:
+        - path: test/integration/default
         - name: thosey-windows-baseline
           url: https://tim.haus/chef/admin-thosey-windows-baseline-0.1.2.tar.gz
         - name: linux-baseline

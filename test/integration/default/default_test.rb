@@ -3,14 +3,24 @@
 # The InSpec reference, with examples and extensive documentation, can be
 # found at https://www.inspec.io/docs/reference/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
+# Windows tests
+if os.windows?
+  describe directory('C:\\Tools') do
+    it { should exist }
+  end
+
+  describe file('C:\\Tools\\UserRights.psm1') do
     it { should exist }
   end
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+# Ubuntu tests
+if os.debian?
+  describe package('haveged') do
+    it { should be_installed }
+  end
+
+  describe package('auditd') do
+    it { should be_installed }
+  end
 end
