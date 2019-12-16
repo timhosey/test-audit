@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.9
+
+- Reset contents of `/usr/libexec/openssh/ssh-keysign`
+
 ## 0.3.8
 
 - Added centos-8 to `kitchen.yml` for better testing/integration
