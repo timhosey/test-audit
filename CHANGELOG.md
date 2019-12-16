@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.4
+
+- Added support for RedHat
+  - Added `supports` line
+  - Added to attributes/default.rb `case` statement
+
 ## 0.3.3
 
 - Updated `default_test.rb` and `kitchen.yml` to focus on testing for resources and InSpec verification

@@ -10,7 +10,7 @@ when 'windows'
     'compliance': 'admin/thosey-windows-baseline',
     'version': '0.1.2',
   } ]
-when 'ubuntu'
+when 'ubuntu', 'redhat'
   default['audit']['profiles'] = [ {
     'compliance': 'admin/linux-baseline',
     'version': '2.2.2',
