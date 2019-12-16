@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.13
+
+- Changed `file` to `cookbook_file` for `*-login.defs` files
+
 ## 0.3.12
 
 - Moved `replace_or_add` lines at start to be individually managed files - `rhel-login.defs` and `ubuntu-login.defs`
