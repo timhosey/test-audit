@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.8
+
+- Added centos-8 to `kitchen.yml` for better testing/integration
+- Made `auditd` ackage for Ubuntu only
+- Added `line` cookbook dependency
+- Changed `haveged` package to be Ubuntu-only
+
 ## 0.3.7
 
 - Added rhel8 to `kitchen.yml` for quicker testing/iteration

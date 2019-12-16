@@ -17,3 +17,4 @@ cookbook 'test-audit', path: '.'
 
 cookbook 'audit', '~> 9.0.1', :supermarket
 cookbook 'chef-client', '~> 11.4.0', :supermarket
+cookbook 'line', '~> 2.5.0', :supermarket

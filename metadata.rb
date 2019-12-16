@@ -3,12 +3,13 @@ maintainer 'Tim Hosey'
 maintainer_email 'thosey@chef.io'
 license 'All Rights Reserved'
 description 'Audit cookbook for remediation and security'
-version '0.3.7'
+version '0.3.8'
 chef_version '>= 15.0'
 
 # Dependencies
 depends 'audit'
 depends 'chef-client'
+depends 'line'
 
 # Supported OSes
 supports 'ubuntu'

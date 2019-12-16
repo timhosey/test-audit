@@ -26,6 +26,7 @@ platforms:
   - name: rhel8
     driver:
       box: generic/rhel8
+  - name: centos-8
 
 suites:
   - name: default
@@ -33,7 +34,7 @@ suites:
       inspec_tests:
         - path: test/integration/default
         - name: thosey-windows-baseline
-          url: https://github.com/timhosey/admin-thosey-baseline/releases/admin-thosey-windows-baseline-0.1.2.tar.gz
+          url: https://tim.haus/chef/admin-thosey-windows-baseline-0.1.2.tar.gz
         - name: linux-baseline
-          url: https://github.com/timhosey/admin-linux-baseline/releases/admin-linux-baseline-2.2.2.tar.gz
+          url: https://tim.haus/chef/admin-linux-baseline-2.2.2.tar.gz
     attributes:
