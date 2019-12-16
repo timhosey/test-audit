@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.5
+
+- Added os-5 remediations
+- Added remediations (recipes/rhel8.rb) recipe for RedHat 8
+- Called remediations recipe in default.rb
+
 ## 0.3.4
 
 - Added support for RedHat

@@ -9,7 +9,7 @@ when 'ubuntu'
   include_recipe 'test-audit::ubuntu'
   include_recipe 'chef-client::cron'
 when 'redhat'
-  # TODO: Add remediation recipe
+  include_recipe 'test-audit::rhel8'
   include_recipe 'chef-client::cron'
 when 'windows'
   include_recipe 'test-audit::windows'
