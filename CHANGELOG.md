@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.10
+
+- Changed `os10` action of the `remediate` resource to use `append_if_no_line`
+
 ## 0.3.9
 
 - Reset contents of `/usr/libexec/openssh/ssh-keysign`

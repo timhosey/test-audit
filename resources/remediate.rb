@@ -13,6 +13,9 @@ action :os10 do
     'install vfat /bin/true',
   ]
   entries.each do |entry|
-    execute "grep -qxF '#{entry}' /etc/modprobe.d/dev-sec.conf || echo '#{entry}' >> /etc/modprobe.d/dev-sec.conf"
+    append_if_no_line entry do
+      path '/etc/modprobe.d/dev-sec.conf'
+      line entry
+    end
   end
 end
