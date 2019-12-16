@@ -16,7 +16,7 @@ end
 
 # Add lines to /etc/modprobe.d/dev-sec.conf if they don't exist (os-10)
 remediate 'Remediating os-10' do
-  action :ubuntu_os10
+  action :os10
 end
 
 # Install auditd to remediate package-08

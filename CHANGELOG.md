@@ -2,9 +2,15 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.6
+
+- Added os-05b remediation
+- Skipping os-06 for now since I don't know repercussions of clearing that file right now
+- Changed `remediate` custom resource action from `ubuntu_os10` to just `os10` as it works for RHEL too
+
 ## 0.3.5
 
-- Added os-5 remediations
+- Added os-05 remediations
 - Added remediations (recipes/rhel8.rb) recipe for RedHat 8
 - Called remediations recipe in default.rb
 - Added execute lines that checks for existence of `ENV_PATH` and `ENV_SUPATH` and add if not exist

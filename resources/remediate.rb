@@ -1,7 +1,7 @@
 resource_name :remediate
 provides :remediate
 
-action :ubuntu_os10 do
+action :os10 do
   entries = [
     'install cramfs /bin/true',
     'install freevxfs /bin/true',
