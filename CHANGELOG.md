@@ -8,6 +8,7 @@ This file is used to list changes made in each version of the test-audit cookboo
 - Added remediations (recipes/rhel8.rb) recipe for RedHat 8
 - Called remediations recipe in default.rb
 - Added execute lines that checks for existence of `ENV_PATH` and `ENV_SUPATH` and add if not exist
+- Changed from using `=` to `\t` for defining `ENV_PATH` and `ENV_SUPATH`
 
 ## 0.3.4
 
