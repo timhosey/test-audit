@@ -23,6 +23,9 @@ platforms:
     driver:
        box: tas50/windows_2016
   - name: ubuntu-18.04
+  - name: rhel8
+    driver:
+      box: generic/rhel8
 
 suites:
   - name: default

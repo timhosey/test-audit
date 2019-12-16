@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.7
+
+- Added rhel8 to `kitchen.yml` for quicker testing/iteration
+- Condensed both Ubuntu and RHEL recipes into a single `linux.rb` recipe.
+
 ## 0.3.6
 
 - Added os-05b remediation
