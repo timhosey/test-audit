@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.12
+
+- Moved `replace_or_add` lines at start to be individually managed files - `rhel-login.defs` and `ubuntu-login.defs`
+- Added some variables/ifs for mode and file based on platform
+- Updated `readme.md`
+
 ## 0.3.11
 
 - Completely removing `/usr/libexec/openssh/ssh-keysign`
