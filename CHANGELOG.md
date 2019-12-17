@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.14
+
+- Changed `login.defs` file mode to be 0444 on whatever version of Linux
+
 ## 0.3.13
 
 - Changed `file` to `cookbook_file` for `*-login.defs` files
