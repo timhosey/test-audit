@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the test-audit cookbook.
 
+## 0.3.17
+
+- Cleanup of recipes -- relying on chef-client cookbook without direct calls
+- Removed default from attributes for `chef-client` cookbook interval
+
 ## 0.3.16
 
 - Removed recipe calls in `default` recipe

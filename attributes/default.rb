@@ -16,6 +16,3 @@ when 'ubuntu', 'redhat'
     'version': '2.2.2',
   } ]
 end
-
-## Sets our attributes for chef-client
-default['chef_client']['interval'] = 1800
