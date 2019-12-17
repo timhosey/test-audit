@@ -10,7 +10,7 @@ name 'test-audit'
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'test-audit::default'
+run_list 'chef-client', 'test-audit', 'audit'
 
 # Specify a custom source for a single cookbook:
 cookbook 'test-audit', path: '.'
