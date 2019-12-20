@@ -2,6 +2,7 @@
 
 #########################################################################################################
 # User rights management
+# Note: Might be easier/idempotent to use windows cookbook and windows_user_privilege resource
 windows_userright 'User rights setup' do
   action :prep
 end
@@ -35,6 +36,7 @@ end
 
 #########################################################################################################
 # Set user password/auth policies
+# These are not idempotent, which I don't like; but I couldn't find a better way to do this.
 # Set LockoutDuration to 30 minutes -- cis-account-lockout-duration-1.2.1
 batch 'Set LockoutDuration' do
   code 'net accounts /lockoutduration:30'
