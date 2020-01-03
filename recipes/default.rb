@@ -4,8 +4,7 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
-case node['platform']
-when 'windows'
+if platform?('windows')
   include_recipe 'test-audit::windows'
 else
   include_recipe 'test-audit::linux'

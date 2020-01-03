@@ -55,7 +55,7 @@ end
 
 # Install havaged package to increase entropy (os-08)
 package 'haveged' do
-  notifies :run, 'execute[update-rc.d haveged defaults]', :immediate
+  notifies :run, 'execute[update-rc.d haveged defaults]', :immediately
   only_if { platform?('ubuntu') }
 end
 

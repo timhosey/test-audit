@@ -7,8 +7,6 @@ version '0.3.17'
 chef_version '>= 15.0'
 
 # Dependencies
-depends 'audit'
-depends 'chef-client'
 depends 'line'
 
 # Supported OSes

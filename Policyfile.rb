@@ -15,6 +15,6 @@ run_list 'chef-client', 'test-audit', 'audit'
 # Specify a custom source for a single cookbook:
 cookbook 'test-audit', path: '.'
 
-cookbook 'audit', '~> 9.0.1', :supermarket
-cookbook 'chef-client', '~> 11.4.0', :supermarket
-cookbook 'line', '~> 2.5.0', :supermarket
+cookbook 'audit', '~> 9.0.1'
+cookbook 'chef-client', '~> 11.4.0'
+cookbook 'line', '~> 2.5.0'
